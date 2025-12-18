@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>@zombi</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <style>
+    :root {
+      --bg: #0b0b0d;
+      --card: #141417;
+      --accent: #8b5cf6;
+      --text: #ffffff;
+      --muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #111827, var(--bg));
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .profile {
+      width: 100%;
+      max-width: 420px;
+      background: linear-gradient(180deg, #16161a, #0b0b0d);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+      animation: fadeUp 0.8s ease;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .username {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .bio {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 6px;
+      margin-bottom: 20px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      background: var(--card);
+      border-radius: 14px;
+      color: var(--text);
+      text-decoration: none;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .links a:hover {
+      transform: scale(1.03);
+      background: #1f1f26;
+    }
+
+    .links svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 0.7rem;
+      color: var(--muted);
+      opacity: 0.6;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile">
+    <center>
+      <img class="avatar" src="https://i.imgur.com/8Km9tLL.png" alt="avatar" />
+      <div class="username">@username</div>
+      <div class="bio">your short bio goes here</div>
+    </center>
+
+    <div class="stats">
+      <div>🌐 1,234 views</div>
+      <div>🔗 5 links</div>
+    </div>
+
+    <div class="links">
+      <a href="#" target="_blank"><i data-feather="message-circle"></i> Discord</a>
+      <a href="#" target="_blank"><i data-feather="instagram"></i> Instagram</a>
+      <a href="#" target="_blank"><i data-feather="twitter"></i> Twitter / X</a>
+      <a href="#" target="_blank"><i data-feather="github"></i> GitHub</a>
+      <a href="#" target="_blank"><i data-feather="music"></i> Spotify</a>
+    </div>
+
+    <div class="footer">
+      made by zombi
+    </div>
+  </div>
+
+  <!-- Background music (optional) -->
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>

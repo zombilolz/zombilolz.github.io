@@ -150,3 +150,10 @@
   </script>
 </body>
 </html>
+
+<audio id="bgm" src="music.mp3" loop></audio>
+<script>
+  document.addEventListener('click', () => {
+    document.getElementById('bgm').play();
+  }, { once: true });
+</script>
